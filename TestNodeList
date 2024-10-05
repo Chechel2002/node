@@ -1,0 +1,28 @@
+public class TestNodeList {
+    public static void main(String[] args) {
+        NodeList nodeList = new NodeList();
+
+        System.out.println("Is the list empty? " + nodeList.isEmpty());
+
+        nodeList.add(new Node("Node 1"));
+        nodeList.add(new Node("Node 2"));
+        nodeList.add(new Node("Node 3"));
+        System.out.println("Contents of the list after additions:");
+        nodeList.display();
+
+        System.out.println("Deleting node at position 1:");
+        nodeList.delete(1);
+        nodeList.display();
+
+        System.out.println("Deleting node at position 0:");
+        nodeList.delete(0);
+        nodeList.display();
+
+        System.out.println("Trying to delete a node at an invalid position (10):");
+        boolean deleted = nodeList.delete(10);
+        System.out.println("Delete successful: " + deleted);
+
+        System.out.println("Final contents of the list:");
+        nodeList.display();
+    }
+}
